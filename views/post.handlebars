@@ -1,0 +1,25 @@
+<div>
+    <div>{{post.title}}</div>
+    <div>{{post.post_content}}</div>
+    <div>{{post.user.email}}</div>
+    <div>{{post.createdAt}}</div>
+    <div>
+        <ul>
+            {{#each post.comments as |comment|}}
+            {{> comment-list}}
+            {{/each}}
+        </ul>
+    </div>
+    {{#if loggedIn}}
+        <form class="form comment-form">
+            <div class="form-group">
+                <input class="form-input" type="text" id="comment" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Comment</button>
+            </div>
+        </form>
+    {{/if}}
+</div>
+
+<script src="/javascript/comment.js"></script>

@@ -1,0 +1,16 @@
+<form class="form post-form">
+    <div class="form-group">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-input" type="text" id="title" value="{{post.title}}" />
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="post-content">Body</label>
+        <input class="form-input" type="text" id="post-content" value="{{post.post_content}}" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Update</button>
+    </div>
+</form>
+<button class="btn btn-primary" id="delete-post">Delete</button>
+
+<script src="/javascript/edit-post.js"></script>

@@ -1,0 +1,42 @@
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <script
+      src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/e5b76a8e97.js"
+      crossorigin="anonymous"
+    ></script>
+
+  </head>
+
+  <body>
+    <nav>
+      <div class="mx-auto max-w-7x1">
+        <div class="w-full py-6 flex">
+          <a href="/" class="inline-block bg-blue-600 mx-5 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75 cursor-pointer">Home</a>
+          <a href="/dashboard" class="inline-block bg-blue-600 mx-5 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75 cursor-pointer">Dashboard</a>
+          {{#if loggedIn}}
+            <a href="#" class="px-3 py-2 rounded-md" id="logout">Logout</a>
+          {{else}}
+            <a href="/login" class="inline-block mx-5 bg-blue-600 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">Login</a>
+            <a href="/signup" class="inline-block bg-white py-2 px-4 border bg-blue-600 rounded-md text-base font-medium text-blue-600 hover:bg-blue-50">Sign Up</a>
+          {{/if}}
+        </div>
+      The Tech Blog
+      </div>
+    </nav>
+    <main class="py-4 flex flex-wrap justify-left space-x-6 lg">
+        {{{body}}}
+    </main>
+  </body>
+  <script src="/javascript/main.js"></script>
+</html>

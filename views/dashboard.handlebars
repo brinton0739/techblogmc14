@@ -1,0 +1,29 @@
+<div class = "">
+    <h3 class = "">dashboard: your posts</h3>
+</div>
+<div>
+    <ul>
+        {{#each posts as |post|}}
+        {{> my-posts}}
+        {{/each}}
+    </ul>
+</div>
+<div>
+    {{#if loggedIn}}
+    <form class="form post-form">
+        <div class="form-group">
+            <label class="form-label" for="title">Title</label>
+            <input class="form-input" type="text" id="title" />
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="post-content">Body</label>
+            <input class="form-input" type="text" id="post-content" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Post</button>
+        </div>
+    </form>
+    {{/if}}
+</div>
+
+<script src="/javascript/create-post.js"></script>
